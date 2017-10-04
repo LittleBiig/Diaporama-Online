@@ -10,17 +10,28 @@ class Properties extends Component {
       switch(this.props.type){
         case "img":
             render_visual=(
+              <div>
+                <h3>{this.props.id}</h3>
+                
                 <img 
                     className='imgCard' 
                     src={this.props.src}  
                 />
+                </div>
+
+                
+
                 );
         break;
         case "video":
               render_visual=(
-              <object  width="100%" height="100%"
+              <div>
+                <h3>{this.props.id}</h3>
+                <object  width="100%" height="100%"
                         data={this.props.src}>
                 </object>
+                </div>
+                
                 );
         break;
               
@@ -28,7 +39,7 @@ class Properties extends Component {
       
       
     return (
-            <div className="thumbnail">
+            <div className="prop">
                 {render_visual}
             </div>            
     );

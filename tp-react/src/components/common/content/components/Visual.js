@@ -11,7 +11,7 @@ class Visual extends Component {
         case "img":
             render_visual=(
                 <img 
-                    className='imgCard' 
+                     
                     src={this.props.src}  
                 />
                 );
@@ -28,7 +28,7 @@ class Visual extends Component {
       
       
     return (
-            <div className="thumbnail">
+            <div className="visu">
                 {render_visual}
             </div>            
     );
