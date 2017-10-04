@@ -1,6 +1,6 @@
 import React from 'react';
 import './main.css';
-import '../../lib/bootstrap-3.3.7-dist/css/bootstrap.min.css';
+//import '../../lib/bootstrap-3.3.7-dist/css/bootstrap.min.css';
 import * as contentMapTmp from '../../source/contentMap.json';
 export default class Main extends React.Component{
 constructor(props) {
