@@ -22,6 +22,7 @@ class Content extends Component {
               render_visual=(
               <Properties  
                     id={this.props.id}
+                    title={this.props.title}
                     src={this.props.src}
                     type={this.props.type}  
                 />

@@ -6,12 +6,17 @@ class Properties extends Component {
     }
   
   render() {
+
+
+
+
+
       let render_visual;
       switch(this.props.type){
-        case "img":
+        case "img_url":
             render_visual=(
               <div>
-                <h3>{this.props.id}</h3>
+                <h3>{this.props.id} {this.props.title}</h3>
                 
                 <img 
                     className='imgCard' 
@@ -23,10 +28,25 @@ class Properties extends Component {
 
                 );
         break;
+        case "web":
+            render_visual=(
+              <div>
+                <h3>{this.props.id} {this.props.title}</h3>
+                
+                <iframe 
+                    className='imgCard' 
+                    src={this.props.src}  
+                ></iframe>
+                </div>
+
+                
+
+                );
+        break;
         case "video":
               render_visual=(
               <div>
-                <h3>{this.props.id}</h3>
+                <h3>{this.props.id} {this.props.title}</h3>
                 <object  width="100%" height="100%"
                         data={this.props.src}>
                 </object>

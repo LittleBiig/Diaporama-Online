@@ -8,12 +8,26 @@ class Visual extends Component {
   render() {
       let render_visual;
       switch(this.props.type){
-        case "img":
+        case "img_url":
             render_visual=(
                 <img 
                      
                     src={this.props.src}  
                 />
+                );
+        break;
+        case "web":
+            render_visual=(
+              <div> 
+                
+                <iframe 
+                    className='imgCard' 
+                    src={this.props.src}  
+                ></iframe>
+                </div>
+
+                
+
                 );
         break;
         case "video":
