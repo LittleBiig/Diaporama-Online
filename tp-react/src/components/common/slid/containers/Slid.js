@@ -5,14 +5,14 @@ import EditMetaSlid from '../components/EditMetaSlid';
 
 class Slid extends Component {
     constructor(props) {
-        super(props); 
+        super(props);
         this.state={
             title:this.props.title,
             txt:this.props.txt
-        } 
+        }
         this.handleChangeTitle=this.handleChangeTitle.bind(this);
         this.handleChangeTxt=this.handleChangeTxt.bind(this);
-              
+
     }
 
     handleChangeTitle(e) {
@@ -26,7 +26,7 @@ class Slid extends Component {
             txt: e.target.value
         });
     }
-  
+
   render() {
       let render_visual;
       switch(this.props.displayMode){
@@ -35,12 +35,12 @@ class Slid extends Component {
                 <div>
                 <h2>{this.props.id} {this.state.title} {this.state.txt}</h2>
 
-                <Content 
+                <Content
                     src={this.props.contentMap[this.props.content].src}
                     title={this.props.contentMap[this.props.content].title}
                     id={this.props.contentMap[this.props.content].id}
-                    type={this.props.contentMap[this.props.content].type}   
-                    onlyContent={this.props.onlyContent} 
+                    type={this.props.contentMap[this.props.content].type}
+                    onlyContent={this.props.onlyContent}
                 />
                 </div>
                 );
@@ -48,31 +48,31 @@ class Slid extends Component {
         case "FULL_MNG":
                 render_visual=(
                 <div>
-                <EditMetaSlid 
+                <EditMetaSlid
                     title={this.state.title}
                     txt={this.state.txt}
                     handleChangeTitle={this.handleChangeTitle}
                     handleChangeTxt={this.handleChangeTxt}
                 />
-                
-                <Content 
+
+                <Content
                     src={this.props.contentMap[this.props.content].src}
                     title={this.props.contentMap[this.props.content].title}
                     id={this.props.contentMap[this.props.content].id}
                     type={this.props.contentMap[this.props.content].type}
-                    onlyContent={this.props.onlyContent} 
+                    onlyContent={this.props.onlyContent}
                 />
                 </div>
                 );
         break;
-              
+
         }
-      
-      
+
+
     return (
-            <div>
+            <div className="form-group">
                 {render_visual}
-            </div>            
+            </div>
     );
   }
 }

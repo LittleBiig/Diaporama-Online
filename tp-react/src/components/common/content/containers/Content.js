@@ -4,38 +4,38 @@ import Properties from '../components/Properties';
 
 class Content extends Component {
     constructor(props) {
-        super(props);        
+        super(props);
     }
-  
+
   render() {
       let render_visual;
       switch(this.props.onlyContent){
         case true:
             render_visual=(
-                <Visual 
-                    src={this.props.src} 
-                    type={this.props.type} 
+                <Visual
+                    src={this.props.src}
+                    type={this.props.type}
                 />
                 );
         break;
         case false:
               render_visual=(
-              <Properties  
+              <Properties
                     id={this.props.id}
                     title={this.props.title}
                     src={this.props.src}
-                    type={this.props.type}  
+                    type={this.props.type}
                 />
                 );
         break;
-              
+
         }
-      
-      
+
+
     return (
-            <div>
+            <div className="form-group">
                 {render_visual}
-            </div>            
+            </div>
     );
   }
 }

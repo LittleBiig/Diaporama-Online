@@ -2,31 +2,31 @@ import React, { Component } from 'react';
 
 class Visual extends Component {
     constructor(props) {
-        super(props);        
+        super(props);
     }
-  
+
   render() {
       let render_visual;
       switch(this.props.type){
         case "img_url":
             render_visual=(
-                <img 
-                     
-                    src={this.props.src}  
+                <img
+
+                    src={this.props.src}
                 />
                 );
         break;
         case "web":
             render_visual=(
-              <div> 
-                
-                <iframe 
-                    className='imgCard' 
-                    src={this.props.src}  
+              <div>
+
+                <iframe
+                    className='imgCard'
+                    src={this.props.src}
                 ></iframe>
                 </div>
 
-                
+
 
                 );
         break;
@@ -37,14 +37,14 @@ class Visual extends Component {
                 </object>
                 );
         break;
-              
+
         }
-      
-      
+
+
     return (
             <div className="visu">
                 {render_visual}
-            </div>            
+            </div>
     );
   }
 }

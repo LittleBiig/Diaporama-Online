@@ -5,13 +5,13 @@ import Content from '../../common/content/containers/Content';
 
 class browseContentPanel extends Component {
     constructor(props) {
-        super(props);        
+        super(props);
     }
 
 
 getAllDiapoRender(){
     let array_render=[];
-     
+
     for(var i=1;i<Object.keys(this.props.contentMap).length;i++){
         array_render.push(
             <Content
@@ -26,11 +26,11 @@ getAllDiapoRender(){
     }
     return array_render;
 }
-  
+
     render() {
       const display_list= this.getAllDiapoRender();
     return (
-            <div>
+            <div className="form-group-element">
                {display_list}
             </div>
     );

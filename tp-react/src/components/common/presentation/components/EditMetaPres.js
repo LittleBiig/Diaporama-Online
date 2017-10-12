@@ -32,20 +32,20 @@ export default class EditMetaPres extends React.Component{
  			<input
 				type="text"
 				className="form-control"
-				
+
 				onChange={this.handleChangeTitle}
 				value={this.state.title}
  			/>
 			<label htmlFor="currentSlideText">Text</label>
  			<textarea
-				rows="5"
+				rows="7"
 				type="text"
 				className="form-control"
-				
+
 				onChange={this.handleChangeDescription}
 				value={this.state.description}>
 			</textarea>
 		</div>
-		); 
+		);
 	}
 }
