@@ -29,7 +29,7 @@ var contentModel = function(cmodel) {
 
     function check_attr(cmodel) {
         if (typeof cmodel === "undefined") {
-            cmodel = { type: null, id: null, title: null, fileName: null, data: null };
+            cmodel = { type: null, id: null, title: null, fileName: null, src: null, data: null };
         }
         return cmodel;
     }
@@ -39,10 +39,17 @@ var contentModel = function(cmodel) {
 
 contentModel.create = function(content, callback) {
 
-    if (content.id === undefined) {
-        callback("L'id ne peut pas être nulle");
-        return false;
+    if (!content.id) {
+        return callback(new Error("L'id est nul ou n'est pas défini"));
     }
+    if (!content.type) {
+        return callback(new Error("Le type est nul ou n'est pas défini"));
+    }
+    if (!content.title) {
+        return callback(new Error("Le title est nul ou n'est pas défini"));
+    }
+    
+    console.log('--------------create  new file');
     fs.writeFile(path.join(CONFIG.contentDirectory, content.fileName), content.getData(), function(err) {
         if (err) {
             console.log(err.message);
@@ -63,10 +70,10 @@ contentModel.create = function(content, callback) {
 
 contentModel.read = function(id, callback) {
 
-    if (id === undefined) {
-        callback("L'id ne peut pas être nulle");
-        return false;
+    if (!id) {
+        return callback(new Error("L'id est nul ou n'est pas défini"));
     }
+
 
     console.log("id en parametre :", id);
     fs.readFile(path.join(CONFIG.contentDirectory, id + ".meta.json"), 'utf8', function(err, data) {
@@ -88,11 +95,15 @@ contentModel.update = function(content, callback) {
 
 
     if (content.getData() && content.getData().length > 0) {
-        if (content.id === undefined) {
-            callback("L'id ne peut pas être nulle");
-            console.log("L'id ne peut pas être nulle-----");
-            return false;
-        }
+        if (!content.id) {
+        return callback(new Error("L'id est nul ou n'est pas défini"));
+    }
+    if (!content.type) {
+        return callback(new Error("Le type est nul ou n'est pas défini"));
+    }
+    if (!content.title) {
+        return callback(new Error("Le title est nul ou n'est pas défini"));
+    }
         fs.writeFile(path.join(CONFIG.contentDirectory, content.fileName), content.getData(), function(err) {
 
             if (err) {

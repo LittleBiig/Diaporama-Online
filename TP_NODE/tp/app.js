@@ -9,7 +9,7 @@ var path = require("path");
 var express = require("express");
 
 var defaultRoute = require("./app/routes/default.route.js");
-var contentRoute = require("./app/routes/content.router.js");
+var contentRoute = require("./app/routes/content.route.js");
 
 console.log('It Works !');
 

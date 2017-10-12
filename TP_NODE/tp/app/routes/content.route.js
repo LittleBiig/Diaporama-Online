@@ -16,14 +16,14 @@ router.route('/contents')
         } else {
             response.json(contentlist);
         }
-    });
+    }));
 
     .post("/contents", multerMiddleware.single("file"), function(request, response) {
-    	var fileName = request.file.originalname
     console.log(request.file.path); // The full path to the uploaded file
     console.log(request.file.originalname); // Name of the file on the user's computer
     console.log(request.file.mimetype); // Mime type of the file
-});
+    });
+
 
 router.route('/contents/:contentId')
     .get(contentController.read)
