@@ -6,6 +6,13 @@ import '../../lib/bootstrap-4.0.0-beta-dist/css/bootstrap.min.css';
 import './main.css';
 import * as contentMapTmp from '../../source/contentMap.json';
 import * as presTmp from '../../source/pres.json'
+
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import globalReducer from '../../reducers';
+
+const store = createStore(globalReducer);
+
 export default class Main extends React.Component{
 constructor(props) {
 super(props);
@@ -18,46 +25,48 @@ onlyContent:onlyContent1
 }
 render() {
 return (
-	<div className='container-fluid height-100'>
-		<div className="row height-100 main">
-			<div className='col-md-3 col-lg-3 height-100 vertical-scroll left-panel'>
-				<Presentation
-					title={this.state.pres.title}
-					description={this.state.pres.description}
-					slidArray={this.state.pres.slidArray}
+	<Provider store={store} >
+		<div className='container-fluid height-100'>
+			<div className="row height-100 main">
+				<div className='col-md-3 col-lg-3 height-100 vertical-scroll left-panel'>
+					<Presentation
+						title={this.state.pres.title}
+						description={this.state.pres.description}
+						slidArray={this.state.pres.slidArray}
+						contentMap={this.state.contentMap}
+						onlyContent={this.state.onlyContent}
+					/>
+				</div>
+			<div className='col-md-6 col-lg-6 height-100 vertical-scroll center-panel ' >
+				<Slid
+					id="1"
+					title="titre_du_slide"
+					txt="description"
+					content="2"
+					contentMap={this.state.contentMap}
+					displayMode="FULL_MNG"
+					onlyContent={this.state.onlyContent}
+				/>
+				<Slid
+					id="1"
+					title="titre_du_slide"
+					txt="description"
+					content="2"
+					contentMap={this.state.contentMap}
+					displayMode="SHORT"
+					onlyContent={this.state.onlyContent}
+				/>
+
+			</div>
+			<div className='col-md-3 col-lg-3 height-100 vertical-scroll right-panel'>
+				<BrowseContentPanel
 					contentMap={this.state.contentMap}
 					onlyContent={this.state.onlyContent}
 				/>
 			</div>
-		<div className='col-md-6 col-lg-6 height-100 vertical-scroll center-panel ' >
-			<Slid
-				id="1"
-				title="titre_du_slide"
-				txt="description"
-				content="2"
-				contentMap={this.state.contentMap}
-				displayMode="FULL_MNG"
-				onlyContent={this.state.onlyContent}
-			/>
-			<Slid
-				id="1"
-				title="titre_du_slide"
-				txt="description"
-				content="2"
-				contentMap={this.state.contentMap}
-				displayMode="SHORT"
-				onlyContent={this.state.onlyContent}
-			/>
-
-		</div>
-		<div className='col-md-3 col-lg-3 height-100 vertical-scroll right-panel'>
-			<BrowseContentPanel
-				contentMap={this.state.contentMap}
-				onlyContent={this.state.onlyContent}
-			/>
 		</div>
 	</div>
-</div>
+</Provider>
 );
 }
 }
