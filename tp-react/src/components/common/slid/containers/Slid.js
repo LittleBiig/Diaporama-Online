@@ -36,7 +36,7 @@ class Slid extends Component {
         const tmpSlid={id:this.props.id,
                         title:this.props.title,
                         txt:this.props.txt,
-                        content_id:this.props.content_id};
+                        content:this.props.content};
         this.props.dispatch(setSelectedSlid(tmpSlid));
 
     }

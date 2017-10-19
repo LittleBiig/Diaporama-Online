@@ -3,6 +3,7 @@ import React from 'react';
 import BrowseContentPanel from '../browseContentPanel/containers/browseContentPanel';
 import Slid from '../common/slid/containers/Slid';
 import Presentation from '../common/presentation/containers/Presentation';
+import EditSlidePanel from '../editSlidePanel/containers/EditSlidePanel';
 import './main.css';
 import * as contentMapTmp from '../../source/contentMap.json';
 import * as presTmp from '../../source/pres.json'
@@ -38,15 +39,9 @@ return (
 					/>
 				</div>
 			<div className='col-md-6 col-lg-6 height-100 vertical-scroll center-panel ' >
-				<Slid
-					id="1"
-					title="Slide Title"
-					txt="Lorem ipsum ..."
-					content="2"
+				<EditSlidePanel 
 					contentMap={this.state.contentMap}
-					displayMode="FULL_MNG"
-					onlyContent={this.state.onlyContent}
-				/>
+					/>
 				<Slid
 					id="1"
 					title="Slide Title"

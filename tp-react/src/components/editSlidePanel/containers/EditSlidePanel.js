@@ -7,19 +7,39 @@ import { connect } from 'react-redux';
 
 class EditSlidPanel extends React.Component
 {
-	constructor(props) {
+    constructor(props) {
         super(props);
-        this.state={
-            title:this.props.title,
-            txt:this.props.txt
-        }
     }
+
+    render() {
+      if(this.props.selected_slid.id ==undefined){
+          return <div></div>;
+      }
+    
+    return (
+            <div>
+                <Slid 
+                    id={this.props.selected_slid.id}
+                    title={this.props.selected_slid.title}
+                    txt={this.props.selected_slid.txt}
+                    content={this.props.selected_slid.content}
+                    contentMap={this.props.contentMap}
+                    displayMode="FULL_MNG"
+                    onlyContent="false"
+
+                    />
+            </div>
+    );
+  }
+}
+    
 
 
 const mapStateToProps =(state,ownProps)=> {
-	return {
-		selected_slid:state.selectedReducer.slid,
-	}};
+    return {
+        selected_slid:state.selectedReducer.slid
+    }
+};
 
 
 export default connect(mapStateToProps)(EditSlidPanel);
