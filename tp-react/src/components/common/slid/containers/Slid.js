@@ -3,6 +3,9 @@ import Content from '../../content/containers/Content';
 import EditMetaSlid from '../components/EditMetaSlid';
 import './slid.css';
 
+import { connect } from 'react-redux';
+import {setSelectedSlid} from '../../../../actions';
+
 
 class Slid extends Component {
     constructor(props) {
@@ -13,6 +16,7 @@ class Slid extends Component {
         }
         this.handleChangeTitle=this.handleChangeTitle.bind(this);
         this.handleChangeTxt=this.handleChangeTxt.bind(this);
+        this.updateSelectedSlid=this.updateSelectedSlid.bind(this);
 
     }
 
@@ -26,6 +30,15 @@ class Slid extends Component {
         this.setState({
             txt: e.target.value
         });
+    }
+
+    updateSelectedSlid() {
+        const tmpSlid={id:this.props.id,
+                        title:this.props.title,
+                        txt:this.props.txt,
+                        content_id:this.props.content_id};
+        this.props.dispatch(setSelectedSlid(tmpSlid));
+
     }
 
   render() {
@@ -71,11 +84,11 @@ class Slid extends Component {
 
 
     return (
-            <div className="slid">
+            <div className="slid" onClick={()=>this.updateSelectedSlid()}>
                 {render_visual}
             </div>
     );
   }
 }
 
-export default Slid;
+export default connect() (Slid);
