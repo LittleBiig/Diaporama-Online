@@ -38,7 +38,7 @@ export default class EditMetaPres extends React.Component{
  			/>
 			<label htmlFor="currentSlideText">Text</label>
  			<textarea
-				rows="7"
+				rows="3"
 				type="text"
 				className="form-control"
 

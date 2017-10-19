@@ -4,13 +4,13 @@ import Slid from '../../slid/containers/Slid';
 
 class SlidList extends Component {
     constructor(props) {
-        super(props);        
+        super(props);
     }
 
 
 getAllPresRender(){
     let array_render=[];
-     
+
     for(var i=0;i<Object.keys(this.props.slidArray).length;i++){
         array_render.push(
             <Slid
@@ -27,7 +27,7 @@ getAllPresRender(){
     }
     return array_render;
 }
-  
+
     render() {
       const display_list= this.getAllPresRender();
     return (

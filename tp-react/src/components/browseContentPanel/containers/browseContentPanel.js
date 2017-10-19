@@ -12,7 +12,7 @@ class browseContentPanel extends Component {
 getAllDiapoRender(){
     let array_render=[];
 
-    for(var i=1;i<Object.keys(this.props.contentMap).length;i++){
+    for(var i=0;i<Object.keys(this.props.contentMap).length;i++){
         array_render.push(
             <Content
                 key={i}

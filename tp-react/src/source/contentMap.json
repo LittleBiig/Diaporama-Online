@@ -1,36 +1,42 @@
-{"temp":{
-		"id":"temp",
-		"title":"content Title",
+{		"0":
+		{
+		"id":0,
+		"title":"Title of Content 0",
 		"type":"img_url",
 		"src":"http://www.wauchopeshowsociety.com.au/images/sl_website-under-construction.jpeg"
 	  },
-	  "1":{
+	  "1":
+		{
 		"id":1,
-		"title":"content Title 1",
+		"title":"Title of Content 1",
 		"type":"video",
 		"src":"https://www.youtube.com/embed/WjoDEQqyTig"
 	  },
-	  "2":{
+	  "2":
+		{
 		"id":2,
-		"title":"content Title 2",
+		"title":"Title of Content 2",
 		"type":"img_url",
 		"src":"http://zoywiki.com/images/6/68/LotS_Robot_Reindeer.png"
 	  },
-	  "3":{
+	  "3":
+		{
 		"id":3,
-		"title":"content Title 3",
+		"title":"Title of Content 3",
 		"type":"web",
 		"src":"http://www.roboware.me/#/"
 	  },
-	  "4":{
+	  "4":
+		{
 		"id":4,
-		"title":"content Title 4",
+		"title":"Title of Content 4",
 		"type":"video",
 		"src":"https://www.youtube.com/embed/7DmLkugdh9s"
 	  },
-		"5":{
+		"5":
+		{
 		"id":5,
-		"title":"content Title 5",
+		"title":"Title of Content 5",
 		"type":"video",
 		"src":"https://www.youtube.com/embed/7DmLkugdh9s"
 		}
