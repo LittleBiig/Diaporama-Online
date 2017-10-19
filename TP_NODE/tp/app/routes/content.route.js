@@ -13,7 +13,7 @@ router.route('/contents')
     .post(multerMiddleware.single("file"), contentController.create);
 
 router.route("/contents/:contentId")
-    .get(req.contentId,contentController.read);
+    .get(contentController.read);
 
 router.param('contentId', function(req, res, next, id) {
     req.contentId = id;

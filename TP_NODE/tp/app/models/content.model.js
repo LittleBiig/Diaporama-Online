@@ -50,11 +50,25 @@ contentModel.create = function(content, callback) {
     }
     
     console.log('--------------create  new file');
-    fs.writeFile(path.join(CONFIG.contentDirectory, content.fileName), content.getData(), function(err) {
-        if (err) {
-            console.log(err.message);
-            return callback(err);
-        }
+    if (content.type === "img")
+    {
+        fs.writeFile(path.join(CONFIG.contentDirectory, content.fileName), content.getData(), function(err) {
+            if (err) {
+                console.log(err.message);
+                return callback(err);
+            }
+            fs.writeFile(path.join(CONFIG.contentDirectory, content.id + ".meta.json"), JSON.stringify(content), function(err) {
+                if (err) {
+                    console.log(err.message);
+                    return callback(err);
+                }
+                console.log('CREATED ' + content.id);
+                console.log('file created successfully');
+                return callback();
+            });
+        });
+    }
+    else {
         fs.writeFile(path.join(CONFIG.contentDirectory, content.id + ".meta.json"), JSON.stringify(content), function(err) {
             if (err) {
                 console.log(err.message);
@@ -62,9 +76,9 @@ contentModel.create = function(content, callback) {
             }
             console.log('CREATED ' + content.id);
             console.log('file created successfully');
-            callback();
+            return callback();
         });
-    });
+    }
 
 };
 

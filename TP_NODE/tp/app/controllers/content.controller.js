@@ -3,13 +3,14 @@ var CONFIG = require("./../../config.json");
 process.env.CONFIG = JSON.stringify(CONFIG);
 var path = require("path");
 var fs = require("fs");
+const uuidv1 = require('uuid/v1');
 
 
 
 
 
 // ########################### LIST #################################
-var list = function(request, response) {
+this.list = function(request, response) {
     var dirpath = CONFIG.contentDirectory;
     fs.readdir(CONFIG.contentDirectory, function(err, files) {
         if (err) {
@@ -34,13 +35,11 @@ var list = function(request, response) {
                     return response.status(500).end(err.message);
                 } else {
 
-                    var contents = new contentModel(content);
                     console.dir(content.getData());
-                    contents.src = path.join(CONFIG.contentDirectory, contents.fileName);
 
-                    content_list[contents.id] = contents;
+                    content_list[content.id] = content;
                     if (i == filteredFiles.length - 1) {
-                        return response.json(contentlist);;
+                        return response.json(content_list);
                     }
                     i++;
                 }
@@ -57,72 +56,102 @@ function extension(element) {
 };
 
 // ########################### CREATE #################################
-var create = function(request, response) {
-
-    var origfilename = request.file.originalname;
-    var title = origfilename.substr(0, origfilename.lastIndexOf('.'));
-    var type = path.extname(origfilename).substr(1);
-    var tmp_path = request.file.path;
-    // set where the file should actually exists 
-    var target_path = path.join(CONFIG.contentDirectory, origfilename);
-    // move the file from the temporary location to the intended location
-    fs.rename(tmp_path, target_path, function(err) {
-        if (err) throw err;
-        // delete the temporary file, so that the explicitly set temporary upload dir does not get filled with unwanted files
-        fs.unlink(tmp_path, function() {
-            if (err) {
-                throw err;
-            }
-        });
-
-        fs.readFile(target_path, 'utf8', function(err, data) {
+this.create = function(request, response) {
+    var title = request.body.title;
+    var type = request.body.type;
+    var fileName;
+    if (type === "img"){
+        var origfilename = request.file.originalname;
+        var ext = path.extname(origfilename).substr(1);
+        var tmp_path = request.file.path;
+        var target_path = path.join(CONFIG.contentDirectory, origfilename);
+        fs.readFile(tmp_path, 'utf8', function(err, data) {
             if (err) {
                 console.error(response.status(500).end);
                 return response.status(500).end;
             }
 
-            var json_file = {};
-            json_file["id"] = uiid.generateUUID();
-            json_file["type"] = type;
-            json_file["title"] = title;
-            json_file["fileName"] = json_file["id"] + '.' + type;
-            json_file["data"] = data;
-
-            contentModel.create(json_file, err);
-            fs.rename(target_path, path.join(CONFIG.contentDirectory, json_file["fileName"]));
+            var file_content = new contentModel();
+            file_content.id = uuidv1();
+            file_content.type = type;
+            file_content.title = title;
+            file_content.fileName = file_content.id + '.' + ext;
+            file_content.src = "/contents/" + content.id;
+            file_content.setData(data);
+            fileName = file_content.fileName;
+            contentModel.create(file_content, function(err){
+               if (err) 
+                {
+                throw err;
+                } 
+            });
 
         });
-        response.send(request.files);
 
-    });
+    } 
+    else {
+        var src = request.body.src;
+        var file_content = new contentModel();
+        var ext = path.extname(src).substr(1);
+        console.log("ext")
+        file_content.id = uuidv1();
+        file_content.type = type;
+        file_content.title = title;
+        file_content.src = src;
+        file_content.fileName = file_content.id +"."+ ext;
+        contentModel.create(file_content, function(err){
+           if (err) 
+            {
+            throw err;
+            } 
+
+        });
+
+    }    
+    response.send(request.files);
+
 }
-
+    
 // ########################### READ #################################
-var read = function(request, response) {
+this.read = function(request, response) {
 
     var params = request.url.split("/");
     var id = params[2];
     var json = '';
-    if (params[3]) json = params[3];
-    else {
-        if (json == "json=true") {
-            response.send(JSON.stringify(content));
-        } else {
-
-            var filename = content.fileName;
-            fs.readFile(path.join(CONFIG.contentDirectory, filename), 'utf8', function(err, data) {
-
-                if (err) {
-                    response.status(500).send(err);
-                }
-                if (!data) {
-
-                } else {
-                    response.send(data);
-                }
-
-            });
+    contentModel.read(id,function(err,content){
+        if (err) 
+        {
+        console.error(response.status(500).end);
+        return response.status(500).end;
         }
-    }
+        else{
+            console.log(params[3]);
+            if (params[3]){ 
+                json = params[3];
+
+                if (json == "json=true") {
+                    response.send(JSON.stringify(content));
+                }
+            }
+
+            else {
+                if (content.type === "img") {
+                    console.log(content.src);
+                    response.send(content.src);   
+                }
+                else {
+                    console.log(content.src);
+                    var path = content.src;
+                    response.redirect(path); 
+                }
+            
+            }
+
+        }
+    
+    });
+    
 
 }
+
+module.export = this;

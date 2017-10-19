@@ -24,6 +24,7 @@ server.listen(CONFIG.port, function() {
 
 
 app.use(defaultRoute);
+app.use(contentRoute);
 
 app.use("/index", express.static(path.join(__dirname, "public/")));
 
