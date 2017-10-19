@@ -1,10 +1,6 @@
 .card{
   max-width: calc(100% - 2 * 10px );
   margin:10px;
-
-}
-
-
-.visu{
   background-color: transparent;
+  border:none;
 }

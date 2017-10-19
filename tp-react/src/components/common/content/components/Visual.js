@@ -11,14 +11,14 @@ class Visual extends Component {
       switch(this.props.type){
         case "img_url":
             render_visual=(
-                <img className="visu"
+                <img
                     src={this.props.src}
                 />
                 );
         break;
         case "web":
             render_visual=(
-              <div className="visu">
+              <div >
                 <iframe
                     src={this.props.src}
                 ></iframe>
@@ -30,7 +30,7 @@ class Visual extends Component {
         break;
         case "video":
               render_visual=(
-              <object  className="visu"
+              <object
               width="100%" height="100%"
                         data={this.props.src}>
                 </object>

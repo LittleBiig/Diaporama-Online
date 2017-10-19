@@ -1,8 +1,8 @@
+import '../../lib/bootstrap-4.0.0-beta-dist/css/bootstrap.min.css';
 import React from 'react';
 import BrowseContentPanel from '../browseContentPanel/containers/browseContentPanel';
 import Slid from '../common/slid/containers/Slid';
 import Presentation from '../common/presentation/containers/Presentation';
-import '../../lib/bootstrap-4.0.0-beta-dist/css/bootstrap.min.css';
 import './main.css';
 import * as contentMapTmp from '../../source/contentMap.json';
 import * as presTmp from '../../source/pres.json'
@@ -40,8 +40,8 @@ return (
 			<div className='col-md-6 col-lg-6 height-100 vertical-scroll center-panel ' >
 				<Slid
 					id="1"
-					title="titre_du_slide"
-					txt="description"
+					title="Slide Title"
+					txt="Lorem ipsum ..."
 					content="2"
 					contentMap={this.state.contentMap}
 					displayMode="FULL_MNG"
@@ -49,7 +49,7 @@ return (
 				/>
 				<Slid
 					id="1"
-					title="titre_du_slide"
+					title="Slide Title"
 					txt="description"
 					content="2"
 					contentMap={this.state.contentMap}

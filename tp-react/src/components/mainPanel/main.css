@@ -1,15 +1,7 @@
-
-
 html,body{
     height: 100vh;
     width: 100vw;
     overflow: hidden;
-
-}
-
-
-.main{
-
 }
 
 ::-webkit-scrollbar {
@@ -24,13 +16,11 @@ label{
 h2
 {
   font-size: 1rem;
-
 }
 
 h3
 {
-
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   font-weight: 800;
 }
 
@@ -54,7 +44,7 @@ h3
 
 .left-panel{
   padding: 20px;
-  background-color: #C5EFF7;
+  background-color: #E0F7FA;
   border:solid;
   border-width: 10px;
   border-color: #67809F;
@@ -64,14 +54,14 @@ h3
 }
 
 .center-panel{
-  padding: 20px;
+  padding: 50px;
   box-shadow: 1px 1px 12px #555;
-  background-color: rgba(0,100,50,0.2);
+  background-color: rgba(0,0,0,0.02);
 }
 
 .right-panel{
   padding: 20px;
-  background-color: #C5EFF7;
+  background-color: #E0F7FA;
   border:solid;
   border-width: 10px;
   border-color: #67809F;
@@ -81,13 +71,13 @@ h3
 }
 
 .form-group{
-  background-color: #ecf0f1;
+  background-color: white;
   margin-bottom:80px;
   padding: 10px;
-  border:solid;
+  /*border:solid;
   border-width: 2px;
-  border-color: rgba(0,0,0,0.4);
-  box-shadow: 1px 1px 4px #555;
+  border-color: rgba(0,0,0,0.4);*/
+  /*box-shadow: 1px 1px 4px #555;*/
   /*border-top: none;*/
   /*border-bottom: none;*/
 }

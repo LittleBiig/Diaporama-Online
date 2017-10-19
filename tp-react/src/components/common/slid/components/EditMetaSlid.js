@@ -4,10 +4,11 @@ export default class EditMetaSlid extends React.Component{
  constructor(props) {
  super(props);
  }
+ // <label htmlFor="currentSlideTitle">Title h1 of the slide</label>
+ // <label htmlFor="currentSlideText">Text</label>
  render(){
  return (
- <div className="form-group jumbotron">
-    <label htmlFor="currentSlideTitle">Title h1</label>
+ <div className=" ">
     <input
          type="text"
          className="form-control"
@@ -16,7 +17,6 @@ export default class EditMetaSlid extends React.Component{
          value={this.props.title}
      />
      <br/>
-    <label htmlFor="currentSlideText">Text p</label>
      <textarea
          rows="5"
          type="text"
