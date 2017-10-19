@@ -7,22 +7,23 @@ export default class EditMetaSlid extends React.Component{
  render(){
  return (
  <div className="form-group jumbotron">
- <label htmlFor="currentSlideTitle">Title </label>
- <input
- type="text"
- className="form-control"
- id="currentSlideTitle"
- onChange={this.props.handleChangeTitle}
- value={this.props.title}
- />
-<label htmlFor="currentSlideText">Text</label>
- <textarea
- rows="5"
- type="text"
- className="form-control"
- id="currentSlideText"
- onChange={this.props.handleChangeTxt}
- value={this.props.txt}>
- </textarea>
+    <label htmlFor="currentSlideTitle">Title h1</label>
+    <input
+         type="text"
+         className="form-control"
+         id="currentSlideTitle"
+         onChange={this.props.handleChangeTitle}
+         value={this.props.title}
+     />
+     <br/>
+    <label htmlFor="currentSlideText">Text p</label>
+     <textarea
+         rows="5"
+         type="text"
+         className="form-control"
+         id="currentSlideText"
+         onChange={this.props.handleChangeTxt}
+         value={this.props.txt}>
+     </textarea>
  </div>
  ); }}

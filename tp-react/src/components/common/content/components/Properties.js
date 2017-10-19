@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 
 class Properties extends Component {
     constructor(props) {
-        super(props);        
+        super(props);
     }
-  
+
   render() {
 
 
@@ -15,53 +15,54 @@ class Properties extends Component {
       switch(this.props.type){
         case "img_url":
             render_visual=(
-              <div>
-                <h3>{this.props.id} {this.props.title}</h3>
-                
-                <img 
-                    className='imgCard' 
-                    src={this.props.src}  
+              <div >
+                <h3>{this.props.id} - {this.props.title}</h3>
+
+                <img
+                    className='imgCard card'
+                    src={this.props.src}
                 />
                 </div>
 
-                
+
 
                 );
         break;
         case "web":
             render_visual=(
-              <div>
-                <h3>{this.props.id} {this.props.title}</h3>
-                
-                <iframe 
-                    className='imgCard' 
-                    src={this.props.src}  
+              <div >
+                <h3>{this.props.id} - {this.props.title}</h3>
+
+                <iframe
+                    className='web card'
+                    src={this.props.src}
                 ></iframe>
                 </div>
 
-                
+
 
                 );
         break;
         case "video":
               render_visual=(
-              <div>
-                <h3>{this.props.id} {this.props.title}</h3>
+              <div >
+                <h3>{this.props.id} - {this.props.title}</h3>
                 <object  width="100%" height="100%"
+                className='video card'
                         data={this.props.src}>
                 </object>
                 </div>
-                
+
                 );
         break;
-              
+
         }
-      
-      
+
+
     return (
             <div className="prop">
                 {render_visual}
-            </div>            
+            </div>
     );
   }
 }

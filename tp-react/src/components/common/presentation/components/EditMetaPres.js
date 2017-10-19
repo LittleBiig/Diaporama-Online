@@ -36,6 +36,7 @@ export default class EditMetaPres extends React.Component{
 				onChange={this.handleChangeTitle}
 				value={this.state.title}
  			/>
+			     <br/>
 			<label htmlFor="currentSlideText">Text</label>
  			<textarea
 				rows="3"

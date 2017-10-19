@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Content from '../../content/containers/Content';
 import EditMetaSlid from '../components/EditMetaSlid';
+import './slid.css';
 
 
 class Slid extends Component {
@@ -70,7 +71,7 @@ class Slid extends Component {
 
 
     return (
-            <div className="form-group">
+            <div className="slid">
                 {render_visual}
             </div>
     );

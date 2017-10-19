@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Visual.css';
+import './visual.css';
 
 class Visual extends Component {
     constructor(props) {
@@ -11,18 +11,15 @@ class Visual extends Component {
       switch(this.props.type){
         case "img_url":
             render_visual=(
-                <img
-
+                <img className="visu"
                     src={this.props.src}
                 />
                 );
         break;
         case "web":
             render_visual=(
-              <div>
-
+              <div className="visu">
                 <iframe
-                    className='imgCard'
                     src={this.props.src}
                 ></iframe>
                 </div>
@@ -33,7 +30,8 @@ class Visual extends Component {
         break;
         case "video":
               render_visual=(
-              <object  width="100%" height="100%"
+              <object  className="visu"
+              width="100%" height="100%"
                         data={this.props.src}>
                 </object>
                 );
@@ -43,7 +41,7 @@ class Visual extends Component {
 
 
     return (
-            <div className="visu">
+            <div >
                 {render_visual}
             </div>
     );

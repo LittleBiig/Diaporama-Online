@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Visual from '../components/Visual';
 import Properties from '../components/Properties';
+import './content.css';
 
 class Content extends Component {
     constructor(props) {
@@ -33,7 +34,7 @@ class Content extends Component {
 
 
     return (
-            <div className="form-group">
+            <div className="content">
                 {render_visual}
             </div>
     );
