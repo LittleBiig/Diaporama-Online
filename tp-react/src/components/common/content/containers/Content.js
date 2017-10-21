@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Visual from '../components/Visual';
 import Properties from '../components/Properties';
 import './content.css';
+import { connect } from 'react-redux';
+
 
 class Content extends Component {
     constructor(props) {
@@ -41,4 +43,11 @@ class Content extends Component {
   }
 }
 
-export default Content;
+const mapStateToProps =(state,ownProps)=> {
+    return {
+        contentMap:state.updateModelReducer.content_map
+    }
+};
+
+
+export default connect(mapStateToProps) (Content);

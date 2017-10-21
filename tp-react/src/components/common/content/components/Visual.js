@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './visual.css';
+import { connect } from 'react-redux';
+
 
 class Visual extends Component {
     constructor(props) {
@@ -48,4 +50,11 @@ class Visual extends Component {
   }
 }
 
-export default Visual;
+const mapStateToProps =(state,ownProps)=> {
+    return {
+        contentMap:state.updateModelReducer.content_map
+    }
+};
+
+
+export default connect(mapStateToProps) (Visual);

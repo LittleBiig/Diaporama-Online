@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './properties.css';
+import { connect } from 'react-redux';
+
 
 class Properties extends Component {
     constructor(props) {
@@ -66,4 +68,11 @@ class Properties extends Component {
   }
 }
 
-export default Properties;
+const mapStateToProps =(state,ownProps)=> {
+    return {
+        contentMap:state.updateModelReducer.content_map
+    }
+};
+
+
+export default connect(mapStateToProps) (Properties);

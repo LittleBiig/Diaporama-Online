@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import {setSelectedSlid} from '../../../../actions';
 
 
+
 class Slid extends Component {
     constructor(props) {
         super(props);
@@ -103,4 +104,11 @@ class Slid extends Component {
   }
 }
 
-export default connect() (Slid);
+const mapStateToProps =(state,ownProps)=> {
+    return {
+        contentMap:state.updateModelReducer.content_map
+    }
+};
+
+
+export default connect(mapStateToProps) (Slid);

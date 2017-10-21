@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './browseContentPanel.css'
 import Content from '../../common/content/containers/Content';
+import { connect } from 'react-redux';
+
 
 
 class browseContentPanel extends Component {
@@ -37,4 +39,10 @@ getAllDiapoRender(){
   }
 }
 
-export default browseContentPanel;
+const mapStateToProps =(state,ownProps)=> {
+    return {
+        contentMap:state.updateModelReducer.content_map
+    }
+};
+
+export default connect(mapStateToProps) (browseContentPanel);

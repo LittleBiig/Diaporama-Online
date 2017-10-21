@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import EditMetaPres from '../components/EditMetaPres';
 import SlidList from '../components/SlidList';
+import { connect } from 'react-redux';
+
 
 class Presentation extends Component {
     constructor(props) {
@@ -33,4 +35,11 @@ class Presentation extends Component {
   }
 }
 
-export default Presentation;
+const mapStateToProps =(state,ownProps)=> {
+    return {
+        contentMap:state.updateModelReducer.content_map
+    }
+};
+
+
+export default connect(mapStateToProps) (Presentation);

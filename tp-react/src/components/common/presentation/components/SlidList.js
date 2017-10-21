@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Slid from '../../slid/containers/Slid';
+import { connect } from 'react-redux';
+
 
 
 class SlidList extends Component {
@@ -38,4 +40,11 @@ getAllPresRender(){
   }
 }
 
-export default SlidList;
+const mapStateToProps =(state,ownProps)=> {
+    return {
+        contentMap:state.updateModelReducer.content_map
+    }
+};
+
+
+export default connect(mapStateToProps) (SlidList);

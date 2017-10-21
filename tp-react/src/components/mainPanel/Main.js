@@ -11,6 +11,7 @@ import * as presTmp from '../../source/pres.json'
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import globalReducer from '../../reducers';
+import {updateContentMap} from '../../actions';
 
 const store = createStore(globalReducer);
 
@@ -23,6 +24,7 @@ contentMap:contentMapTmp,
 pres:presTmp,
 onlyContent:onlyContent1
 }
+store.dispatch(updateContentMap(contentMapTmp));
 }
 render() {
 return (
@@ -65,3 +67,4 @@ return (
 );
 }
 }
+

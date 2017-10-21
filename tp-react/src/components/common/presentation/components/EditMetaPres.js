@@ -1,6 +1,8 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-export default class EditMetaPres extends React.Component{
+
+class EditMetaPres extends React.Component{
 	constructor(props) {
 		super(props);
 		this.state={
@@ -50,3 +52,12 @@ export default class EditMetaPres extends React.Component{
 		);
 	}
 }
+
+const mapStateToProps =(state,ownProps)=> {
+    return {
+        contentMap:state.updateModelReducer.content_map
+    }
+};
+
+
+export default connect(mapStateToProps) (EditMetaPres);
