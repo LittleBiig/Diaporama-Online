@@ -10,9 +10,11 @@ import {setSelectedSlid} from '../../../../actions';
 class Slid extends Component {
     constructor(props) {
         super(props);
+        let changeInput=false;
         this.state={
             title:this.props.title,
-            txt:this.props.txt
+            txt:this.props.txt,
+            changeInput:changeInput
         }
         this.handleChangeTitle=this.handleChangeTitle.bind(this);
         this.handleChangeTxt=this.handleChangeTxt.bind(this);
@@ -24,12 +26,14 @@ class Slid extends Component {
         this.setState({
             title: e.target.value
         });
+        this.state.changeInput=true;
     }
 
     handleChangeTxt(e) {
         this.setState({
             txt: e.target.value
         });
+        this.state.changeInput=true;
     }
 
     updateSelectedSlid() {
@@ -43,11 +47,18 @@ class Slid extends Component {
 
   render() {
       let render_visual;
+      if (!this.state.changeInput) {
+                    this.state.title=this.props.title;
+                    this.state.txt=this.props.txt;
+                    
+                }
+                this.state.changeInput=false;
       switch(this.props.displayMode){
+
         case "SHORT":
             render_visual=(
                 <div>
-                <h2 ><strong>{this.props.id} - {this.state.title}</strong> - {this.state.txt}</h2>
+                <h2 ><strong>{this.props.id} - {this.props.title}</strong> - {this.props.txt}</h2>
 
                 <Content
                     src={this.props.contentMap[this.props.content].src}
@@ -60,6 +71,7 @@ class Slid extends Component {
                 );
         break;
         case "FULL_MNG":
+                
                 render_visual=(
                 <div>
                 <EditMetaSlid

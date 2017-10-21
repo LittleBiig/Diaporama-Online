@@ -7,8 +7,13 @@ import { connect } from 'react-redux';
 
 class EditSlidPanel extends React.Component
 {
+
     constructor(props) {
         super(props);
+        let onlyContent2=false;
+        this.state = {
+            onlyContent:onlyContent2
+        }
     }
 
     render() {
@@ -25,7 +30,7 @@ class EditSlidPanel extends React.Component
                     content={this.props.selected_slid.content}
                     contentMap={this.props.contentMap}
                     displayMode="FULL_MNG"
-                    onlyContent="false"
+                    onlyContent={this.state.onlyContent}
 
                     />
             </div>
