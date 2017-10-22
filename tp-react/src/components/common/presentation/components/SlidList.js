@@ -17,8 +17,8 @@ getAllPresRender(){
         array_render.push(
             <Slid
                 key={i}
-                id={this.props.slidArray[i].id}
-                title={this.props.slidArray[i].title}
+                id={this.props.presentationCourante.slidArray[i].id}
+                title={this.props.presentationCourante.slidArray[i].title}
                 txt={this.props.slidArray[i].txt}
                 content={this.props.slidArray[i].content_id}
                 contentMap={this.props.contentMap}
@@ -42,7 +42,9 @@ getAllPresRender(){
 
 const mapStateToProps =(state,ownProps)=> {
     return {
-        contentMap:state.updateModelReducer.content_map
+        contentMap:state.updateModelReducer.content_map,
+        presentationCourante:state.updateModelReducer.presentation
+
     }
 };
 

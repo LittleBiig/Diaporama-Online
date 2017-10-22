@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Slid from '../../common/slid/containers/Slid'
-
+import {updateSlid} from '../../../actions'
 
 import { connect } from 'react-redux';
 
@@ -14,6 +14,15 @@ class EditSlidPanel extends React.Component
         this.state = {
             onlyContent:onlyContent2
         }
+        this.updateSlid=this.updateSlid.bind(this);
+    }
+
+    updateSlid(id,title,txt,content_id) {
+        const tmpSlid={ id:id,
+                    title:title,
+                    txt:txt,
+                    content_id:content_id};
+        this.props.dispatch(updateSlid(tmpSlid));
     }
 
     render() {
@@ -31,7 +40,7 @@ class EditSlidPanel extends React.Component
                     contentMap={this.props.contentMap}
                     displayMode="FULL_MNG"
                     onlyContent={this.state.onlyContent}
-
+                    updateSlid={this.updateSlid}
                     />
             </div>
     );

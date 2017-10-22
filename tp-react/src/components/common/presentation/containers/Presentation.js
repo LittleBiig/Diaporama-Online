@@ -10,16 +10,17 @@ class Presentation extends Component {
     }
 
     render() {
-        let render_visual;
-        render_visual=(
+        
+        
+        return (
             <div>
             <EditMetaPres
-                title={this.props.title}
-                description={this.props.description}
+                title={this.props.presentationCourante.title}
+                description={this.props.presentationCourante.description}
             />
 
             <SlidList
-                slidArray={this.props.slidArray}
+                slidArray={this.props.presentationCourante.slidArray}
                 contentMap={this.props.contentMap}
                 onlyContent={this.props.onlyContent}
             />
@@ -27,16 +28,15 @@ class Presentation extends Component {
 
         );
 
-    return (
-        <div>
-            {render_visual}
-        </div>
-    );
+    
+    
   }
 }
 
 const mapStateToProps =(state,ownProps)=> {
     return {
+        
+        presentationCourante:state.updateModelReducer.presentation,
         contentMap:state.updateModelReducer.content_map
     }
 };

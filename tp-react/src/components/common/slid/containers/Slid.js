@@ -28,6 +28,9 @@ class Slid extends Component {
             title: e.target.value
         });
         this.state.changeInput=true;
+        
+        this.props.updateSlid(this.props.id,e.target.value,this.state.txt,this.props.content);
+        
     }
 
     handleChangeTxt(e) {
@@ -35,6 +38,9 @@ class Slid extends Component {
             txt: e.target.value
         });
         this.state.changeInput=true;
+
+        this.props.updateSlid(this.props.id,this.state.title,e.target.value,this.props.content);
+
     }
 
     updateSelectedSlid() {

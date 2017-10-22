@@ -12,6 +12,7 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import globalReducer from '../../reducers';
 import {updateContentMap} from '../../actions';
+import {updatePresentation} from '../../actions';
 
 const store = createStore(globalReducer);
 
@@ -24,7 +25,9 @@ contentMap:contentMapTmp,
 pres:presTmp,
 onlyContent:onlyContent1
 }
+store.dispatch(updatePresentation(presTmp));
 store.dispatch(updateContentMap(contentMapTmp));
+
 }
 render() {
 return (
@@ -33,9 +36,6 @@ return (
 			<div className="row height-100 main">
 				<div className='col-md-3 col-lg-3 height-100 vertical-scroll left-panel'>
 					<Presentation
-						title={this.state.pres.title}
-						description={this.state.pres.description}
-						slidArray={this.state.pres.slidArray}
 						contentMap={this.state.contentMap}
 						onlyContent={this.state.onlyContent}
 					/>
