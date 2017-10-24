@@ -8,6 +8,7 @@ var http = require("http");
 var path = require("path");
 var express = require("express");
 
+var IOController = require("./app/controllers/io.controller.js");
 var defaultRoute = require("./app/routes/default.route.js");
 var contentRoute = require("./app/routes/content.route.js");
 
@@ -25,8 +26,10 @@ server.listen(CONFIG.port, function() {
 
 app.use(defaultRoute);
 app.use(contentRoute);
-
+IOController.listen(server);
 app.use("/index", express.static(path.join(__dirname, "public/")));
+app.use("/admin", express.static(path.join(__dirname, "public/admin/"))); 
+app.use("/watch", express.static(path.join(__dirname, "public/watch/"))); 
 
 
 //Q_13.1
