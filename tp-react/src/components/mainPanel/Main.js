@@ -37,7 +37,7 @@ comm.loadPres(0,
 			console.error(error);
 		}
 	);
-store.dispatch(updatePresentation(presTmp));
+store.dispatch(updatePresentation(this.state.pres));
 store.dispatch(updateContentMap(contentMapTmp));
 
 }

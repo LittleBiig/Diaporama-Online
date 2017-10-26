@@ -15,12 +15,32 @@ class Slid extends Component {
         this.state={
             title:this.props.title,
             txt:this.props.txt,
+            content:this.props.content,
             changeInput:changeInput
         }
         this.handleChangeTitle=this.handleChangeTitle.bind(this);
         this.handleChangeTxt=this.handleChangeTxt.bind(this);
         this.updateSelectedSlid=this.updateSelectedSlid.bind(this);
+        this.drop=this.drop.bind(this);
+        this.onDragOver=this.onDragOver.bind(this);
+    }
 
+    drop(ev) {
+        ev.preventDefault();
+        /*var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));*/
+        this.setState({
+            content: this.props.content_drag
+        });
+        this.state.changeInput=true;
+
+        this.props.updateSlid(this.props.id,this.state.title,this.state.txt,this.props.content_drag);
+
+
+    }
+
+    onDragOver(ev) {
+        ev.preventDefault();
     }
 
     handleChangeTitle(e) {
@@ -29,7 +49,7 @@ class Slid extends Component {
         });
         this.state.changeInput=true;
         
-        this.props.updateSlid(this.props.id,e.target.value,this.state.txt,this.props.content);
+        this.props.updateSlid(this.props.id,e.target.value,this.state.txt,this.state.content);
         
     }
 
@@ -39,7 +59,7 @@ class Slid extends Component {
         });
         this.state.changeInput=true;
 
-        this.props.updateSlid(this.props.id,this.state.title,e.target.value,this.props.content);
+        this.props.updateSlid(this.props.id,this.state.title,e.target.value,this.state.content);
 
     }
 
@@ -57,6 +77,7 @@ class Slid extends Component {
       if (!this.state.changeInput) {
                     this.state.title=this.props.title;
                     this.state.txt=this.props.txt;
+                    this.state.content=this.props.content;
                     
                 }
                 this.state.changeInput=false;
@@ -89,10 +110,10 @@ class Slid extends Component {
                 />
 
                 <Content
-                    src={this.props.contentMap[this.props.content].src}
-                    title={this.props.contentMap[this.props.content].title}
-                    id={this.props.contentMap[this.props.content].id}
-                    type={this.props.contentMap[this.props.content].type}
+                    src={this.props.contentMap[this.state.content].src}
+                    title={this.props.contentMap[this.state.content].title}
+                    id={this.props.contentMap[this.state.content].id}
+                    type={this.props.contentMap[this.state.content].type}
                     onlyContent={this.props.onlyContent}
                 />
                 </div>
@@ -103,7 +124,7 @@ class Slid extends Component {
 
 
     return (
-            <div className="slid" onClick={()=>this.updateSelectedSlid()}>
+            <div className="slid" onClick={()=>this.updateSelectedSlid()} onDrop={this.drop} onDragOver={this.onDragOver}>
                 {render_visual}
             </div>
     );
@@ -112,7 +133,8 @@ class Slid extends Component {
 
 const mapStateToProps =(state,ownProps)=> {
     return {
-        contentMap:state.updateModelReducer.content_map
+        contentMap:state.updateModelReducer.content_map,
+        content_drag:state.selectedReducer.content_id
     }
 };
 

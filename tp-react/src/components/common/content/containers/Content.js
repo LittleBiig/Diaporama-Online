@@ -3,12 +3,19 @@ import Visual from '../components/Visual';
 import Properties from '../components/Properties';
 import './content.css';
 import { connect } from 'react-redux';
+import {updateDraggedElt} from '../../../../actions';
 
 
 class Content extends Component {
     constructor(props) {
         super(props);
+        this.drag=this.drag.bind(this);
     }
+
+
+    drag(ev) {
+        this.props.dispatch(updateDraggedElt(this.props.id));
+    } 
 
   render() {
       let render_visual;
@@ -36,7 +43,7 @@ class Content extends Component {
 
 
     return (
-            <div className="content">
+            <div className="content" draggable="true" onDragStart={this.drag}>
                 {render_visual}
             </div>
     );

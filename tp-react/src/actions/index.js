@@ -25,3 +25,10 @@ export const updateSlid=(presentation_obj)=>{
  obj:presentation_obj
  };
 }
+
+export const updateDraggedElt=(contentId_obj)=>{
+ return {
+ type: 'UPDATE_DRAGGED_ELT',
+ obj:contentId_obj
+ };
+}

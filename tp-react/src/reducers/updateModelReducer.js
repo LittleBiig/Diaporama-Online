@@ -19,8 +19,6 @@ for(var i=0;i<Object.keys(state.presentation.slidArray).length;i++){
 	}
 
 }
-
-
 const newState4={presentation:pres,content_map:state.content_map}
 return newState4;
 
