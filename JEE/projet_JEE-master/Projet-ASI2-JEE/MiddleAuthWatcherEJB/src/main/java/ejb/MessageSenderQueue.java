@@ -11,10 +11,6 @@ import javax.jms.Queue;
 import fr.cpe.model.UserModel;
 
 
-/**
-* Session Bean implementation class MessageSenderQueue
-*/
-
 @Stateless
 public class MessageSenderQueue implements MessageSenderQueueLocal {
 		
@@ -34,7 +30,6 @@ public class MessageSenderQueue implements MessageSenderQueueLocal {
 			message.setObject(user);
 			context.createProducer().send(queue, user);
 		} catch (JMSException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

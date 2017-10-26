@@ -5,10 +5,7 @@ import javax.inject.Inject;
 import fr.cpe.rest.IHelloWord;
 import fr.cpe.services.IHelloWorldService;
 
-/**
- * @author ubuntu
- *
- */
+
 public class HelloWord implements IHelloWord {
 
 	@Inject

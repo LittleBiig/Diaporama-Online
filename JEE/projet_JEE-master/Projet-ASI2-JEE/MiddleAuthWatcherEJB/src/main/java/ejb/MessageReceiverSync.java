@@ -12,15 +12,10 @@ import javax.jms.Queue;
 
 import fr.cpe.model.UserModel;
 
-/**
- * Session Bean implementation class MessageReceiverSync
- */
 
 @Stateless
 @LocalBean
 public class MessageReceiverSync implements MessageReceiverSyncLocal {
-	// TODO get jms context
-	// TODO associate queue from "java:/jms/queue/watcherqueue"
 	
 	@Inject
 	JMSContext context;
@@ -31,12 +26,12 @@ public class MessageReceiverSync implements MessageReceiverSyncLocal {
 	public UserModel receiveMessage() {
 
 		JMSConsumer consumer = context.createConsumer(queue);
-		Message m = consumer.receive(1000);
+		Message message = consumer.receive(1000);
 
-		UserModel c = null;
-		if (m instanceof ObjectMessage) {
-			c = (UserModel)m;
+		UserModel user = null;
+		if (message instanceof ObjectMessage) {
+			user = (UserModel)message;
 		}
-		return c;
+		return user;
 	}
 }

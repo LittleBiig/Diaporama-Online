@@ -14,6 +14,9 @@ import fr.cpe.model.enums.Role;
 @Entity
 @Table(name="util")
 public class UserModel  implements Serializable{
+
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue
 	@Column(name="id")

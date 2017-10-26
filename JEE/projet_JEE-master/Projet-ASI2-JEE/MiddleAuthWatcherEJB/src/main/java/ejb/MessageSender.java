@@ -9,9 +9,6 @@ import javax.jms.Topic;
 
 import fr.cpe.model.UserModel;
 
-/**
- * Session Bean implementation class MessageSender
- */
 @Stateless
 @LocalBean
 public class MessageSender implements MessageSenderLocal{
@@ -22,12 +19,14 @@ public class MessageSender implements MessageSenderLocal{
 	@Resource(mappedName = "java:/jms/watcherAuthJMS")
 	Topic topic;
 	
+	public void sendMessage(UserModel user) {
+	      context.createProducer().send(topic, user);
+	}
+	
+	
 	public void sendMessage(String message) {
 		  context.createProducer().send(topic, message);
 	}
 	
-	public void sendMessage(UserModel user) {
-	      context.createProducer().send(topic, user);
-	}
 	
 }

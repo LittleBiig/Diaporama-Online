@@ -1738,3 +1738,134 @@ java.lang.NullPointerException: null
 2017-10-26 16:39:39,255 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
 2017-10-26 16:39:39,595 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2017-10-26 16:39:39,595 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/ubuntu/Desktop/JEE/projet_JEE-master/Projet-ASI2-JEE/WatcherAuthJ2E/src/main/resources
+2017-10-26 16:51:04,932 [Worker-10] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.EjbLifecycleMapping lifecycle mapping for MavenProject: fr.cpe:MiddleAuthWatcherEJB:1.0-SNAPSHOT @ /home/ubuntu/Desktop/PROJET DIAPO/Diaporama-Online/JEE/projet_JEE-master/Projet-ASI2-JEE/MiddleAuthWatcherEJB/pom.xml.
+2017-10-26 16:51:05,131 [Worker-10] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for fr.cpe:MiddleAuthWatcherEJBClient:jar:1.0-SNAPSHOT is missing, no dependency information available
+2017-10-26 16:51:05,731 [Worker-10] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using NULL lifecycle mapping for MavenProject: fr.cpe:Projet:1.0-SNAPSHOT @ /home/ubuntu/Desktop/PROJET DIAPO/Diaporama-Online/JEE/projet_JEE-master/Projet-ASI2-JEE/pom.xml.
+2017-10-26 16:51:05,900 [Worker-10] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.EarLifecycleMapping lifecycle mapping for MavenProject: fr.cpe:WatcherAuthJ2E:1.0-SNAPSHOT @ /home/ubuntu/Desktop/PROJET DIAPO/Diaporama-Online/JEE/projet_JEE-master/Projet-ASI2-JEE/WatcherAuthJ2E/pom.xml.
+2017-10-26 16:51:05,907 [Worker-10] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for fr.cpe:FrontAuthWatcherWebService:war:1.0-SNAPSHOT is missing, no dependency information available
+2017-10-26 16:51:06,399 [Worker-10] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.EjbLifecycleMapping lifecycle mapping for MavenProject: fr.cpe:WatcherAuthProject:1.0-SNAPSHOT @ /home/ubuntu/Desktop/PROJET DIAPO/Diaporama-Online/JEE/projet_JEE-master/Projet-ASI2-JEE/WatcherAuthProject/pom.xml.
+2017-10-26 16:51:08,803 [Worker-10] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for fr.cpe:MiddleAuthWatcherEJBClient:jar:1.0-SNAPSHOT is missing, no dependency information available
+2017-10-26 16:51:08,838 [Worker-10] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for fr.cpe:FrontAuthWatcherWebService:war:1.0-SNAPSHOT is missing, no dependency information available
+2017-10-26 16:51:11,609 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for fr.cpe:MiddleAuthWatcherEJBClient:jar:1.0-SNAPSHOT is missing, no dependency information available
+2017-10-26 16:51:12,701 [Worker-7] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.EjbLifecycleMapping lifecycle mapping for MavenProject: fr.cpe:MiddleAuthWatcherEJB:1.0-SNAPSHOT @ /home/ubuntu/Desktop/PROJET DIAPO/Diaporama-Online/JEE/projet_JEE-master/Projet-ASI2-JEE/MiddleAuthWatcherEJB/pom.xml.
+2017-10-26 16:51:12,710 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for fr.cpe:MiddleAuthWatcherEJBClient:jar:1.0-SNAPSHOT is missing, no dependency information available
+2017-10-26 16:51:12,717 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 16:51:12,731 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-10-26 16:51:12,769 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 16:51:12,770 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-10-26 16:51:20,275 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for fr.cpe:MiddleAuthWatcherEJBClient:jar:1.0-SNAPSHOT is missing, no dependency information available
+2017-10-26 16:51:20,436 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 16:51:20,442 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-10-26 16:51:20,443 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 16:51:20,444 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-10-26 16:51:21,192 [Worker-6] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.EjbLifecycleMapping lifecycle mapping for MavenProject: fr.cpe:MiddleAuthWatcherEJBClient:1.0-SNAPSHOT @ /home/ubuntu/Desktop/PROJET DIAPO/Diaporama-Online/JEE/projet_JEE-master/Projet-ASI2-JEE/MiddleAuthWatcherEJBClient/pom.xml.
+2017-10-26 16:51:21,666 [Worker-6] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.EjbLifecycleMapping lifecycle mapping for MavenProject: fr.cpe:WatcherAuthProject:1.0-SNAPSHOT @ /home/ubuntu/Desktop/PROJET DIAPO/Diaporama-Online/JEE/projet_JEE-master/Projet-ASI2-JEE/WatcherAuthProject/pom.xml.
+2017-10-26 16:51:21,838 [Worker-6] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.EjbLifecycleMapping lifecycle mapping for MavenProject: fr.cpe:MiddleAuthWatcherEJB:1.0-SNAPSHOT @ /home/ubuntu/Desktop/PROJET DIAPO/Diaporama-Online/JEE/projet_JEE-master/Projet-ASI2-JEE/MiddleAuthWatcherEJB/pom.xml.
+2017-10-26 16:51:21,964 [Worker-6] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.EarLifecycleMapping lifecycle mapping for MavenProject: fr.cpe:WatcherAuthJ2E:1.0-SNAPSHOT @ /home/ubuntu/Desktop/PROJET DIAPO/Diaporama-Online/JEE/projet_JEE-master/Projet-ASI2-JEE/WatcherAuthJ2E/pom.xml.
+2017-10-26 16:51:21,988 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for fr.cpe:FrontAuthWatcherWebService:war:1.0-SNAPSHOT is missing, no dependency information available
+2017-10-26 16:51:22,087 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for fr.cpe:FrontAuthWatcherWebService:war:1.0-SNAPSHOT is missing, no dependency information available
+2017-10-26 16:51:22,353 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 16:51:22,353 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-26 16:51:22,369 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 16:51:22,377 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-10-26 16:51:23,971 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 16:51:23,980 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-10-26 16:51:23,983 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 16:51:23,984 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-10-26 16:51:25,013 [Worker-1] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: fr.cpe:FrontAuthWatcherWebService:1.0-SNAPSHOT @ /home/ubuntu/Desktop/PROJET DIAPO/Diaporama-Online/JEE/projet_JEE-master/Projet-ASI2-JEE/FrontAuthWatcherWebService/pom.xml.
+2017-10-26 16:51:25,250 [Worker-1] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.EarLifecycleMapping lifecycle mapping for MavenProject: fr.cpe:WatcherAuthJ2E:1.0-SNAPSHOT @ /home/ubuntu/Desktop/PROJET DIAPO/Diaporama-Online/JEE/projet_JEE-master/Projet-ASI2-JEE/WatcherAuthJ2E/pom.xml.
+2017-10-26 16:51:27,148 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Generating application.xml
+2017-10-26 16:51:27,303 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 16:51:27,303 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/ubuntu/Desktop/PROJET DIAPO/Diaporama-Online/JEE/projet_JEE-master/Projet-ASI2-JEE/FrontAuthWatcherWebService/src/main/resources
+2017-10-26 16:51:27,304 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 16:51:27,304 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/ubuntu/Desktop/PROJET DIAPO/Diaporama-Online/JEE/projet_JEE-master/Projet-ASI2-JEE/FrontAuthWatcherWebService/src/test/resources
+2017-10-26 16:51:28,178 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 16:51:28,178 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/ubuntu/Desktop/PROJET DIAPO/Diaporama-Online/JEE/projet_JEE-master/Projet-ASI2-JEE/WatcherAuthJ2E/src/main/resources
+2017-10-26 16:51:28,712 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 16:51:28,722 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-10-26 16:51:28,724 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 16:51:28,724 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-10-26 17:08:26,364 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 17:08:26,412 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-26 17:08:26,445 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 17:08:26,446 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-10-26 17:08:28,308 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 17:08:28,310 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-10-26 17:08:28,312 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 17:08:28,314 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-10-26 17:08:29,493 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 17:08:29,494 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/ubuntu/Desktop/PROJET DIAPO/Diaporama-Online/JEE/projet_JEE-master/Projet-ASI2-JEE/FrontAuthWatcherWebService/src/main/resources
+2017-10-26 17:08:29,495 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 17:08:29,496 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/ubuntu/Desktop/PROJET DIAPO/Diaporama-Online/JEE/projet_JEE-master/Projet-ASI2-JEE/FrontAuthWatcherWebService/src/test/resources
+2017-10-26 17:08:31,498 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 17:08:31,499 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-10-26 17:08:31,508 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 17:08:31,509 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-10-26 17:19:55,453 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 17:19:55,481 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-10-26 17:19:55,482 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 17:19:55,482 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-10-26 17:20:45,828 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 17:20:45,834 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-10-26 17:20:45,836 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 17:20:45,837 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-10-26 17:21:50,365 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 17:21:50,369 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-10-26 17:21:50,371 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 17:21:50,375 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-10-26 17:21:57,914 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 17:21:57,914 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-10-26 17:21:57,921 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 17:21:57,922 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-10-26 17:22:03,959 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 17:22:03,960 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-10-26 17:22:03,961 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 17:22:03,961 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-10-26 17:22:54,263 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 17:22:54,263 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/ubuntu/Desktop/PROJET DIAPO/Diaporama-Online/JEE/projet_JEE-master/Projet-ASI2-JEE/FrontAuthWatcherWebService/src/main/resources
+2017-10-26 17:22:54,264 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 17:22:54,265 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/ubuntu/Desktop/PROJET DIAPO/Diaporama-Online/JEE/projet_JEE-master/Projet-ASI2-JEE/FrontAuthWatcherWebService/src/test/resources
+2017-10-26 17:27:03,233 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 17:27:03,233 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/ubuntu/Desktop/PROJET DIAPO/Diaporama-Online/JEE/projet_JEE-master/Projet-ASI2-JEE/FrontAuthWatcherWebService/src/main/resources
+2017-10-26 17:27:03,234 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 17:27:03,234 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/ubuntu/Desktop/PROJET DIAPO/Diaporama-Online/JEE/projet_JEE-master/Projet-ASI2-JEE/FrontAuthWatcherWebService/src/test/resources
+2017-10-26 17:27:30,596 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 17:27:30,596 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/ubuntu/Desktop/PROJET DIAPO/Diaporama-Online/JEE/projet_JEE-master/Projet-ASI2-JEE/FrontAuthWatcherWebService/src/main/resources
+2017-10-26 17:27:30,604 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 17:27:30,604 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/ubuntu/Desktop/PROJET DIAPO/Diaporama-Online/JEE/projet_JEE-master/Projet-ASI2-JEE/FrontAuthWatcherWebService/src/test/resources
+2017-10-26 17:29:55,175 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 17:29:55,175 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/ubuntu/Desktop/PROJET DIAPO/Diaporama-Online/JEE/projet_JEE-master/Projet-ASI2-JEE/FrontAuthWatcherWebService/src/main/resources
+2017-10-26 17:29:55,176 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 17:29:55,177 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/ubuntu/Desktop/PROJET DIAPO/Diaporama-Online/JEE/projet_JEE-master/Projet-ASI2-JEE/FrontAuthWatcherWebService/src/test/resources
+2017-10-26 17:30:11,459 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 17:30:11,460 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/ubuntu/Desktop/PROJET DIAPO/Diaporama-Online/JEE/projet_JEE-master/Projet-ASI2-JEE/FrontAuthWatcherWebService/src/main/resources
+2017-10-26 17:30:11,460 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 17:30:11,461 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/ubuntu/Desktop/PROJET DIAPO/Diaporama-Online/JEE/projet_JEE-master/Projet-ASI2-JEE/FrontAuthWatcherWebService/src/test/resources
+2017-10-26 17:30:44,232 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 17:30:44,233 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/ubuntu/Desktop/PROJET DIAPO/Diaporama-Online/JEE/projet_JEE-master/Projet-ASI2-JEE/FrontAuthWatcherWebService/src/main/resources
+2017-10-26 17:30:44,242 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 17:30:44,242 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/ubuntu/Desktop/PROJET DIAPO/Diaporama-Online/JEE/projet_JEE-master/Projet-ASI2-JEE/FrontAuthWatcherWebService/src/test/resources
+2017-10-26 17:31:00,004 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 17:31:00,004 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/ubuntu/Desktop/PROJET DIAPO/Diaporama-Online/JEE/projet_JEE-master/Projet-ASI2-JEE/FrontAuthWatcherWebService/src/main/resources
+2017-10-26 17:31:00,027 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 17:31:00,028 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/ubuntu/Desktop/PROJET DIAPO/Diaporama-Online/JEE/projet_JEE-master/Projet-ASI2-JEE/FrontAuthWatcherWebService/src/test/resources
+2017-10-26 17:31:34,345 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 17:31:34,349 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/ubuntu/Desktop/PROJET DIAPO/Diaporama-Online/JEE/projet_JEE-master/Projet-ASI2-JEE/FrontAuthWatcherWebService/src/main/resources
+2017-10-26 17:31:34,354 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 17:31:34,354 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/ubuntu/Desktop/PROJET DIAPO/Diaporama-Online/JEE/projet_JEE-master/Projet-ASI2-JEE/FrontAuthWatcherWebService/src/test/resources
+2017-10-26 17:32:14,411 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 17:32:14,411 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/ubuntu/Desktop/PROJET DIAPO/Diaporama-Online/JEE/projet_JEE-master/Projet-ASI2-JEE/FrontAuthWatcherWebService/src/main/resources
+2017-10-26 17:32:14,412 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 17:32:14,416 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/ubuntu/Desktop/PROJET DIAPO/Diaporama-Online/JEE/projet_JEE-master/Projet-ASI2-JEE/FrontAuthWatcherWebService/src/test/resources
+2017-10-26 17:32:26,132 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 17:32:26,132 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/ubuntu/Desktop/PROJET DIAPO/Diaporama-Online/JEE/projet_JEE-master/Projet-ASI2-JEE/FrontAuthWatcherWebService/src/main/resources
+2017-10-26 17:32:26,133 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 17:32:26,133 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/ubuntu/Desktop/PROJET DIAPO/Diaporama-Online/JEE/projet_JEE-master/Projet-ASI2-JEE/FrontAuthWatcherWebService/src/test/resources
+2017-10-26 17:52:06,246 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 17:52:06,248 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-26 17:52:06,249 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 17:52:06,249 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-10-26 17:52:13,487 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 17:52:13,487 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-26 17:52:13,488 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-10-26 17:52:13,488 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
