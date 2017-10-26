@@ -101,7 +101,7 @@ class Slid extends Component {
         case "FULL_MNG":
                 
                 render_visual=(
-                <div>
+                <div onDrop={this.drop} onDragOver={this.onDragOver}>
                 <EditMetaSlid
                     title={this.state.title}
                     txt={this.state.txt}
@@ -124,7 +124,7 @@ class Slid extends Component {
 
 
     return (
-            <div className="slid" onClick={()=>this.updateSelectedSlid()} onDrop={this.drop} onDragOver={this.onDragOver}>
+            <div className="slid" onClick={()=>this.updateSelectedSlid()} >
                 {render_visual}
             </div>
     );
