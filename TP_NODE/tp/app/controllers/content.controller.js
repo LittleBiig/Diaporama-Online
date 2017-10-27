@@ -76,7 +76,7 @@ this.create = function(request, response) {
             file_content.type = type;
             file_content.title = title;
             file_content.fileName = file_content.id + '.' + ext;
-            file_content.src = "/contents/" + content.id;
+            file_content.src = "/contents/" + file_content.id;
             file_content.setData(data);
             fileName = file_content.fileName;
             contentModel.create(file_content, function(err){
