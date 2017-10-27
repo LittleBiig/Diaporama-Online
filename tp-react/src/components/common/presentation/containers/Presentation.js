@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import EditMetaPres from '../components/EditMetaPres';
 import SlidList from '../components/SlidList';
+import CommandButtons from '../../../browsePresentationPanel/containers/CommandButtons';
 import { connect } from 'react-redux';
 
 
