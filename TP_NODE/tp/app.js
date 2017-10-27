@@ -31,6 +31,13 @@ app.use("/index", express.static(path.join(__dirname, "public/")));
 app.use("/admin", express.static(path.join(__dirname, "public/admin/"))); 
 app.use("/watch", express.static(path.join(__dirname, "public/watch/"))); 
 
+app.use(function (req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    next();
+});
 
 //Q_13.1
 app.get("/loadPres", function(request, response) {
@@ -104,3 +111,29 @@ app.post("/savePres", function(request, response) {
         });
     });
 });
+
+app.get('/generateUUID', function (request, response) {
+    var newUUID = utils.generateUUID();
+    response.send(newUUID);
+});
+
+
+app.post("/auth", function (req, res) {
+    var request = require('request'); 
+    var data = req.body;
+
+    // connect to JEE
+    var options = {
+        uri: 'http://localhost:8080/FrontAuthWatcherWebService/rest/WatcherAuth',
+        method: 'POST',
+        json: data
+    };
+
+    request(options, function (error, response) {
+        if (!error && response.statusCode == 200) {
+            res.send(response.body);    // response from jee to react
+        }
+    });
+});
+
+
