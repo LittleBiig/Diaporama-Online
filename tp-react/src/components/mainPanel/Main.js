@@ -56,15 +56,7 @@ return (
 				<EditSlidePanel
 					contentMap={this.state.contentMap}
 					/>
-				<Slid
-					id="1"
-					title="Slide Title"
-					txt="description"
-					content="2"
-
-					displayMode="SHORT"
-					onlyContent={this.state.onlyContent}
-				/>
+				
 
 			</div>
 			<div className='col-md-3 col-lg-3 height-100 vertical-scroll right-panel'>

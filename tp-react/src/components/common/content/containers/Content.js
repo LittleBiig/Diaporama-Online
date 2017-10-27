@@ -14,7 +14,7 @@ class Content extends Component {
 
 
     drag(ev) {
-        this.props.dispatch(updateDraggedElt(this.props.id));
+        ev.dataTransfer.setData("text", this.props.id);
     } 
 
   render() {

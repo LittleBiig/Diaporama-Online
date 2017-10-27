@@ -5,6 +5,8 @@ import './slid.css';
 
 import { connect } from 'react-redux';
 import {setSelectedSlid} from '../../../../actions';
+import {updateDraggedElt} from '../../../../actions';
+
 
 
 
@@ -27,14 +29,14 @@ class Slid extends Component {
 
     drop(ev) {
         ev.preventDefault();
-        /*var data = ev.dataTransfer.getData("text");
-        ev.target.appendChild(document.getElementById(data));*/
-        this.setState({
-            content: this.props.content_drag
+        var data = ev.dataTransfer.getData("text");
+        this.props.dispatch(updateDraggedElt(data));
+        /*this.setState({
+            content: data
         });
-        this.state.changeInput=true;
+        this.state.changeInput=true;*/
 
-        this.props.updateSlid(this.props.id,this.state.title,this.state.txt,this.props.content_drag);
+        this.props.updateSlid(this.props.id,this.state.title,this.state.txt,data);
 
 
     }
@@ -49,7 +51,7 @@ class Slid extends Component {
         });
         this.state.changeInput=true;
         
-        this.props.updateSlid(this.props.id,e.target.value,this.state.txt,this.state.content);
+        this.props.updateSlid(this.props.id,e.target.value,this.state.txt,this.props.content);
         
     }
 
@@ -59,7 +61,7 @@ class Slid extends Component {
         });
         this.state.changeInput=true;
 
-        this.props.updateSlid(this.props.id,this.state.title,e.target.value,this.state.content);
+        this.props.updateSlid(this.props.id,this.state.title,e.target.value,this.props.content);
 
     }
 
@@ -68,7 +70,10 @@ class Slid extends Component {
                         title:this.props.title,
                         txt:this.props.txt,
                         content:this.props.content};
+        
         this.props.dispatch(setSelectedSlid(tmpSlid));
+        this.props.dispatch(updateDraggedElt(tmpSlid.content));
+        
 
     }
 
@@ -77,7 +82,7 @@ class Slid extends Component {
       if (!this.state.changeInput) {
                     this.state.title=this.props.title;
                     this.state.txt=this.props.txt;
-                    this.state.content=this.props.content;
+                    //this.state.content=this.props.content;
                     
                 }
                 this.state.changeInput=false;
@@ -110,10 +115,10 @@ class Slid extends Component {
                 />
 
                 <Content
-                    src={this.props.contentMap[this.state.content].src}
-                    title={this.props.contentMap[this.state.content].title}
-                    id={this.props.contentMap[this.state.content].id}
-                    type={this.props.contentMap[this.state.content].type}
+                    src={this.props.contentMap[this.props.content2].src}
+                    title={this.props.contentMap[this.props.content2].title}
+                    id={this.props.contentMap[this.props.content2].id}
+                    type={this.props.contentMap[this.props.content2].type}
                     onlyContent={this.props.onlyContent}
                 />
                 </div>
@@ -134,7 +139,7 @@ class Slid extends Component {
 const mapStateToProps =(state,ownProps)=> {
     return {
         contentMap:state.updateModelReducer.content_map,
-        content_drag:state.selectedReducer.content_id
+        content2:state.selectedReducer.content_id
     }
 };
 
