@@ -1,0 +1,7 @@
+INDEX VERSION 1.3+/home/ubuntu/Desktop/PROJET DIAPO/Diaporama-Online/JEE/tpjeeworkspace/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+2120565419.index
+2612974887.index
+2851652666.index
+3888508175.index
+3205926332.index
+2758616091.index
