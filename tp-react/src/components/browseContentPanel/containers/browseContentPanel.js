@@ -3,6 +3,7 @@ import './browseContentPanel.css'
 import Content from '../../common/content/containers/Content';
 import { connect } from 'react-redux';
 import AddContentPanel from '../components/AddContentPanel';
+import {addContent} from '../../../actions';
 
 
 class browseContentPanel extends Component {
@@ -10,8 +11,8 @@ class browseContentPanel extends Component {
         super(props);
         this.state = {
             open: false,
-            value: "img",
             title:"",
+            value: "img",
             url:""
         }
         this.handleChangeTitle=this.handleChangeTitle.bind(this);
@@ -19,6 +20,7 @@ class browseContentPanel extends Component {
         this.handleChangeType=this.handleChangeType.bind(this);
         this.handleOpen=this.handleOpen.bind(this);
         this.handleClose=this.handleClose.bind(this);
+        this.handleAdd=this.handleAdd.bind(this);
     }
 
     handleChangeTitle(ev) {
@@ -42,6 +44,15 @@ class browseContentPanel extends Component {
     handleClose = () => {
         this.setState({open: false});
     };
+
+    handleAdd() {
+        const content={title:this.state.title,
+                        type:this.state.value,
+                        src:this.state.url};
+        
+        this.props.dispatch(addContent(content));
+        this.handleClose();
+    }
 
 
     getAllDiapoRender(){
@@ -72,6 +83,7 @@ class browseContentPanel extends Component {
                     handleChangeType={this.handleChangeType}
                     handleOpen={this.handleOpen}
                     handleClose={this.handleClose}
+                    handleAdd={this.handleAdd}
                     open={this.state.open}
                     value={this.state.value}
                  />

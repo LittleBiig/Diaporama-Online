@@ -36,7 +36,7 @@ export default class AddContentPanel extends React.Component {
         label="Add"
         primary={true}
         keyboardFocused={true}
-        onClick={this.props.handleClose}
+        onClick={this.props.handleAdd}
       />,
     ];
 

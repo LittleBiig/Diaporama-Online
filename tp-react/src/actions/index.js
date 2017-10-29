@@ -32,3 +32,10 @@ export const updateDraggedElt=(contentId_obj)=>{
  obj:contentId_obj
  };
 }
+
+export const addContent=(content_obj)=>{
+ return {
+ type: 'ADD_CONTENT',
+ obj:content_obj
+ };
+}

@@ -26,6 +26,17 @@ case 'UPDATE_CONTENT_MAP' :
 const newState3={presentation:state.presentation,content_map:action.obj}
 return newState3;
 
+case 'ADD_CONTENT' :
+/*let pres=state.presentation;*/
+var content_map_copy = Object.assign({}, state.content_map);
+const id=Object.keys(state.content_map).length;
+action.obj['id'] = id;
+
+content_map_copy[id]=action.obj;
+
+const newState6={presentation:state.presentation,content_map:content_map_copy}
+return newState6;
+
 
 default :
 return state ;
