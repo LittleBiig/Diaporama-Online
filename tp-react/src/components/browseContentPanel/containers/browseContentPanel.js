@@ -87,6 +87,7 @@ class browseContentPanel extends Component {
                     open={this.state.open}
                     value={this.state.value}
                  />
+                 <br/>
                 {display_list}
             </div>
     );

@@ -20,6 +20,8 @@ class Presentation extends Component {
                 description={this.props.presentationCourante.description}
             />
 
+            <CommandButtons/>
+            <br/>
             <SlidList
                 slidArray={this.props.presentationCourante.slidArray}
                 contentMap={this.props.contentMap}
@@ -28,10 +30,7 @@ class Presentation extends Component {
             </div>
 
         );
-
-    
-    
-  }
+    }
 }
 
 const mapStateToProps =(state,ownProps)=> {

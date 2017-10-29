@@ -5,8 +5,7 @@ const updateModelReducer=(state={presentation:{},content_map:{}},action)=>{
 console.log(action);
 switch(action.type)
 {
-case
-'UPDATE_PRESENTATION' :
+case 'UPDATE_PRESENTATION' :
 const newState2={presentation:action.obj,content_map:state.content_map}
 return newState2;
 
