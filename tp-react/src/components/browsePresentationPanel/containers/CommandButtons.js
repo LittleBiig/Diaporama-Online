@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ActionPresentation from '../components/ActionPresentation';
+import {updateSlid} from '../../../actions';
+
+var Tools = require('../../../services/Tools.js');
 
 class CommandButtons extends Component {
 	constructor(props) {
@@ -11,6 +14,20 @@ class CommandButtons extends Component {
 	}
 
 	handleClickAdd(ev) {
+		let pres=Object.assign({}, this.props.presentationCourante);
+		const idSlid = Object.keys(pres.slidArray).length;
+		const id = Tools.generateUUID();
+		pres.slidArray[idSlid]=idSlid;
+		//spres.slidArray[id].concat({"content_id": "0"});
+		const tmpSlid={id:id,
+                        title:"Title",
+                        txt:"Description",
+                        content_id:"0"};
+        pres.slidArray[idSlid]=tmpSlid;
+		//pres.slidArray[title]="title";
+		//pres.slidArray[txt]="txt";
+		//pres.slidArray[content_id]="0";
+		this.props.dispatch(updateSlid(pres));
 
 	}
 

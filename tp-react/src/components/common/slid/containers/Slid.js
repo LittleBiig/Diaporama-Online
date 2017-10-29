@@ -31,10 +31,10 @@ class Slid extends Component {
         ev.preventDefault();
         var data = ev.dataTransfer.getData("text");
         this.props.dispatch(updateDraggedElt(data));
-        /*this.setState({
+        this.setState({
             content: data
         });
-        this.state.changeInput=true;*/
+        this.state.changeInput=true;
 
         this.props.updateSlid(this.props.id,this.state.title,this.state.txt,data);
 
@@ -51,7 +51,7 @@ class Slid extends Component {
         });
         this.state.changeInput=true;
         
-        this.props.updateSlid(this.props.id,e.target.value,this.state.txt,this.props.content);
+        this.props.updateSlid(this.props.id,e.target.value,this.state.txt,this.props.content2);
         
     }
 
@@ -61,17 +61,18 @@ class Slid extends Component {
         });
         this.state.changeInput=true;
 
-        this.props.updateSlid(this.props.id,this.state.title,e.target.value,this.props.content);
+        this.props.updateSlid(this.props.id,this.state.title,e.target.value,this.props.content2);
 
     }
 
     updateSelectedSlid() {
         const tmpSlid={id:this.props.id,
-                        title:this.props.title,
-                        txt:this.props.txt,
-                        content:this.props.content};
+                        title:this.state.title,
+                        txt:this.state.txt,
+                        content:this.state.content};
         
         this.props.dispatch(setSelectedSlid(tmpSlid));
+        
         this.props.dispatch(updateDraggedElt(tmpSlid.content));
         
 
@@ -82,7 +83,7 @@ class Slid extends Component {
       if (!this.state.changeInput) {
                     this.state.title=this.props.title;
                     this.state.txt=this.props.txt;
-                    //this.state.content=this.props.content;
+                    this.state.content=this.props.content;
                     
                 }
                 this.state.changeInput=false;
