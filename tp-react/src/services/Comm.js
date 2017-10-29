@@ -16,7 +16,7 @@ class Comm{
     }
 
     loadPres(presId,callback,callbackErr){
-     axios.get('/loadPres')
+     axios.get('http://localhost:1337/loadPres')
        .then(function (data) {
          var size = Object.keys(data.data).length;
          console.log("raw data");

@@ -93,7 +93,7 @@ class Slid extends Component {
             render_visual=(
                 <div>
                 <h2 ><strong>{this.props.id} - {this.props.title}</strong> - {this.props.txt}</h2>
-
+                
                 <Content
                     src={this.props.contentMap[this.props.content].src}
                     title={this.props.contentMap[this.props.content].title}

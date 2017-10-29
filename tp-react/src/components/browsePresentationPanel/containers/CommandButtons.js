@@ -18,20 +18,19 @@ class CommandButtons extends Component {
 		const idSlid = Object.keys(pres.slidArray).length;
 		const id = Tools.generateUUID();
 		pres.slidArray[idSlid]=idSlid;
-		//spres.slidArray[id].concat({"content_id": "0"});
 		const tmpSlid={id:id,
                         title:"Title",
                         txt:"Description",
                         content_id:"0"};
         pres.slidArray[idSlid]=tmpSlid;
-		//pres.slidArray[title]="title";
-		//pres.slidArray[txt]="txt";
-		//pres.slidArray[content_id]="0";
 		this.props.dispatch(updateSlid(pres));
 
 	}
 
 	handleClickRemove(ev) {
+		let pres=Object.assign({}, this.props.presentationCourante);
+		pres.slidArray.pop();
+		this.props.dispatch(updateSlid(pres));
 
 	}
 
