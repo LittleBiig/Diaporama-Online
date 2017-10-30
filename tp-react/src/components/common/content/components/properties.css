@@ -1,0 +1,17 @@
+.contentAndDescription{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*border:solid;
+  border-width: 1px;
+  border-radius: 20px;
+  border-color:rgba(0,0,0,0.2);*/
+  background-color: transparent;
+  padding: 10px;
+  /*margin:10px;*/
+
+}
+
+.contentAndDescription p{
+  font-size: 0.9rem;
+}
